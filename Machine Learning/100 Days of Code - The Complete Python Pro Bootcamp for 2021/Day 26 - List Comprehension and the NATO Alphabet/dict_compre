@@ -1,0 +1,41 @@
+import pandas
+# import random
+
+# student_score = {
+#     "Alex": 89,
+#     "Beth": 98,
+#     "Caroline": 87,
+#     "Dave": 95,
+#     "Eleanor": 92,
+#     "Freddie": 84,
+# }
+
+# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+#
+# students_score = {student: random.randint(1, 100) for student in names}
+# print(students_score)
+#
+# passed_students = {student: score for (student, score) in students_score.items() if score >= 60}
+# print(passed_students)
+
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+
+# Looping through dictionaries:
+for (key, value) in student_dict.items():
+    print(value)
+
+student_data_frame = pandas.DataFrame(student_dict)
+print(student_data_frame)
+
+# Loop through a data frame
+# for (key, value) in student_data_frame.items():
+#     print(key)
+
+# Loop through rows of a data frame.
+for (inder, row) in student_data_frame.iterrows():
+    # if row.student == "Angela":
+    #     print(row.score)
+    print(row.student)
